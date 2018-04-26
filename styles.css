@@ -1,0 +1,293 @@
+.hide {
+  left: -999999px;
+  position: absolute;
+}
+/*
+ * These styles were modified from http://zdfs.github.io/toscani/paymentInfo/index.html
+ */
+.credit-card-group {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  
+  overflow: hidden;
+  padding: 0 0.5em;
+  margin-bottom: 0.2em;
+  position: relative;
+
+  height: 63px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 4px 12px;
+  background-color: #fff;
+  box-shadow: inset 0px 2px 5px 0 #cccccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.credit-card-group input {
+  background: transparent;
+  border: 0 !important;
+  box-shadow: none;
+  outline: 0;
+  padding: 0;
+  padding: 1em 0;
+}
+/* CardNumber */
+.credit-card-group .card-number.transitioning-out {
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: .4s;
+  -moz-animation-duration: .4s;
+  -o-animation-duration: .4s;
+  animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: slide;
+  -moz-animation-name: slide;
+  -o-animation-name: slide;
+  animation-name: slide;
+}
+.credit-card-group .card-number.transitioning-in {
+  -webkit-transition: width 0s linear;
+  -moz-transition: width 0s linear;
+  -ms-transition: width 0s linear;
+  -o-transition: width 0s linear;
+  transition: width 0s linear;
+  width: 206px;
+}
+.credit-card-group .card-number {
+  width: 80%;
+}
+.credit-card-group .card-number.full {
+  width: 15%;
+}
+.credit-card-group .card-number.invalid {
+  color: #b94a48;
+}
+/* CardExpiration */
+.credit-card-group .card-expiration {
+  width: 21.5%;
+}
+/* Card  Zip */
+.credit-card-group .card-zip {
+  width: 20%;
+}
+/* Card CVV */
+.credit-card-group .card-cvv {
+  width: 18%;
+}
+/* Card States */
+.credit-card-group.invalid {
+  border-color: #b94a48;
+}
+/* .credit-card-group.invalid input {
+  color: #b94a48;
+} */
+.credit-card-group.valid {
+  border: solid 1px #42bb3d;
+  color: #42bb3d;
+}
+/* Card Image */
+.card-image {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%221%200%2060%2040%22%20enable-background%3D%22new%201%200%2060%2040%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cpath%20fill%3D%22%23C4DAB0%22%20d%3D%22M61%2C35c0%2C2.8-2.2%2C5-5%2C5H6c-2.8%2C0-5-2.2-5-5V5c0-2.8%2C2.2-5%2C5-5h50c2.8%2C0%2C5%2C2.2%2C5%2C5V35z%22/%3E%0D%0A%09%3C/g%3E%0D%0A%09%3Crect%20x%3D%222%22%20y%3D%226.3%22%20fill%3D%22%23424143%22%20width%3D%2259%22%20height%3D%228%22/%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cg%3E%0D%0A%09%09%09%3Cpath%20fill%3D%22%237D9769%22%20d%3D%22M56%2C1c2.2%2C0%2C4%2C1.8%2C4%2C4v30c0%2C2.2-1.8%2C4-4%2C4H6c-2.2%2C0-4-1.8-4-4V5c0-2.2%2C1.8-4%2C4-4H56%20M56%2C0H6%0D%0A%09%09%09%09C3.2%2C0%2C1%2C2.2%2C1%2C5v30c0%2C2.8%2C2.2%2C5%2C5%2C5h50c2.8%2C0%2C5-2.2%2C5-5V5C61%2C2.2%2C58.7%2C0%2C56%2C0L56%2C0z%22/%3E%0D%0A%09%09%3C/g%3E%0D%0A%09%3C/g%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 22px;
+  top: 50%;
+  margin: 0 12px -6px 0;
+  width: 32px;
+  z-index: 2;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+.card-image.visa {
+  background-image: url('../img/cc-visa.svg');
+}
+.card-image.mc {
+  background-image: url('../img/cc-master.svg');
+}
+.card-image.amex {
+  background-image: url('../img/cc-amex.svg');
+}
+.card-image.disc {
+  background-image: url('../img/cc-discover.svg');
+}
+.card-image.diner {
+  background-image: url('../img/cc-diners.svg');
+}
+.card-image.jcb {
+  background-image: url('../img/cc-jcb.svg');
+}
+.card-image.invalid {
+  background-image: url('../img/cc-invalid.svg');
+  padding-top: 26px;
+}
+
+/* SLIDE ANIMATIONS */
+@-webkit-keyframes slide {
+  0%, 10% {
+    text-indent: 0;
+    width: 186px;
+    -webkit-transform: translateX(-10%); }
+
+  10%, 20% {
+    text-indent: -15px;
+    width: 176px;
+    -webkit-transform: translateX(-10%); }
+
+  20%, 30% {
+    text-indent: -30px;
+    width: 156px;
+    -webkit-transform: translateX(-10%); }
+
+  30%, 40% {
+    text-indent: -45px;
+    width: 136px;
+    -webkit-transform: translateX(-10%); }
+
+  40%, 50% {
+    text-indent: -60px;
+    width: 116px;
+    -webkit-transform: translateX(-10%); }
+
+  50%, 60% {
+    text-indent: -75px;
+    width: 96px;
+    -webkit-transform: translateX(-15%); }
+
+  60%, 70% {
+    text-indent: -90px;
+    width: 76px;
+    -webkit-transform: translateX(-15%); }
+
+  70%, 80% {
+    text-indent: -105px;
+    width: 66px;
+    -webkit-transform: translateX(-10%); }
+
+  80%, 90% {
+    text-indent: -110px;
+    width: 56px;
+    -webkit-transform: translateX(-5%); }
+
+  90%, 100% {
+    text-indent: -120px;
+    width: 46px;
+    -webkit-transform: translateX(0); } }
+@-moz-keyframes slide {
+  0%, 10% {
+    text-indent: 0;
+    width: 186px;
+    -moz-transform: translateX(-10%); }
+
+  10%, 20% {
+    text-indent: -15px;
+    width: 176px;
+    -moz-transform: translateX(-10%); }
+
+  20%, 30% {
+    text-indent: -30px;
+    width: 156px;
+    -moz-transform: translateX(-10%); }
+
+  30%, 40% {
+    text-indent: -45px;
+    width: 136px;
+    -moz-transform: translateX(-10%); }
+
+  40%, 50% {
+    text-indent: -60px;
+    width: 116px;
+    -moz-transform: translateX(-10%); }
+
+  50%, 60% {
+    text-indent: -75px;
+    width: 96px;
+    -moz-transform: translateX(-15%); }
+
+  60%, 70% {
+    text-indent: -90px;
+    width: 76px;
+    -moz-transform: translateX(-15%); }
+
+  70%, 80% {
+    text-indent: -105px;
+    width: 66px;
+    -moz-transform: translateX(-10%); }
+
+  80%, 90% {
+    text-indent: -110px;
+    width: 56px;
+    -moz-transform: translateX(-5%); }
+
+  90%, 100% {
+    text-indent: -120px;
+    width: 46px;
+    -moz-transform: translateX(0); } }
+@-o-keyframes slide {
+  0%, 10% {
+    text-indent: 0;
+    width: 186px;
+    -o-transform: translateX(-10%); }
+
+  10%, 20% {
+    text-indent: -15px;
+    width: 176px;
+    -o-transform: translateX(-10%); }
+
+  20%, 30% {
+    text-indent: -30px;
+    width: 156px;
+    -o-transform: translateX(-10%); }
+
+  30%, 40% {
+    text-indent: -45px;
+    width: 136px;
+    -o-transform: translateX(-10%); }
+
+  40%, 50% {
+    text-indent: -60px;
+    width: 116px;
+    -o-transform: translateX(-10%); }
+
+  50%, 60% {
+    text-indent: -75px;
+    width: 96px;
+    -o-transform: translateX(-15%); }
+
+  60%, 70% {
+    text-indent: -90px;
+    width: 76px;
+    -o-transform: translateX(-15%); }
+
+  70%, 80% {
+    text-indent: -105px;
+    width: 66px;
+    -o-transform: translateX(-10%); }
+
+  80%, 90% {
+    text-indent: -110px;
+    width: 56px;
+    -o-transform: translateX(-5%); }
+
+  90%, 100% {
+    text-indent: -120px;
+    width: 46px;
+    -o-transform: translateX(0); } }
